@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+<script src= "https://code.jquery.com/jquery-3.7.0.js"> </script>
+<script src= "https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"> </script>
+<!-- https://datatables.net/examples/ajax/objects.html -->
+
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </tfoot>
+</table>
+<script>
+new DataTable('#example', {
+    ajax: 'https://didactic-space-dollop-rvqvxw4pgqjhpv95-1234.app.github.dev/test.php',
+    columns: [
+        { data: 'name' },
+        { data: 'age' }
+    ]
+});</script>
